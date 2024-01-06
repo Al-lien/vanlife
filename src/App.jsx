@@ -1,24 +1,27 @@
-import {
-  Route,
-  createBrowserRouter,
-  createRoutesFromElements,
-  RouterProvider,
-} from "react-router-dom";
+import { Route, BrowserRouter, Routes, Link } from "react-router-dom";
 
 // pages & components
 import Home from "./pages/Home";
+import About from "./pages/About";
 
 // styles
 import "./App.scss";
 function App() {
-  const router = createBrowserRouter(
-    createRoutesFromElements(<Route path="/" element={<Home />}></Route>)
-  );
-
   return (
-    <>
-      <RouterProvider router={router} />
-    </>
+    <BrowserRouter>
+      <header>
+        <Link className="site-logo" to="/">
+          #VANLIFE
+        </Link>
+        <nav>
+          <Link to="/about">About</Link>
+        </nav>
+      </header>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
