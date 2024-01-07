@@ -34,6 +34,10 @@ header {
     text-transform: uppercase;
     font-weight: 900;
     font-size: 25px;
+
+    &:hover {
+      text-decoration: none;
+    }
   }
 
   a {
@@ -47,6 +51,28 @@ header {
       text-decoration: underline;
     }
   }
+}
+
+a.activeStyle {
+  font-weight: bold;
+  text-decoration: underline;
+  color: #161616;
+}
+
+main {
+  margin-bottom: 84px;
+}
+
+footer {
+  background-color: #161616;
+  color: #aaaaaa;
+  height: 74px;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+  font-weight: 500;
 }
 
 .link-button {
@@ -228,4 +254,112 @@ header {
 
 i[class*="van-type-"] {
   padding: 7px 14px;
+}
+
+.van-detail-container {
+  padding: 27px;
+
+  .back-button {
+    color: black;
+    text-decoration: none;
+
+    span {
+      text-decoration: underline;
+    }
+  }
+}
+
+.van-detail {
+  display: flex;
+  flex-direction: column;
+  color: #161616;
+
+  img {
+    border-radius: 5px;
+    margin-block: 47px;
+  }
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+
+  > i {
+    align-self: flex-start;
+  }
+
+  .van-price {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+
+    span {
+      font-weight: 700;
+      font-size: 1.5rem;
+    }
+  }
+
+  .link-button {
+    background-color: #ff8c38;
+    color: white;
+    font-size: 1.125rem;
+  }
+}
+
+/*** HOST PAGE ***/
+
+.host-nav {
+  display: flex;
+
+  a {
+    text-decoration: none;
+    color: #4d4d4d;
+    font-weight: 500;
+    padding: 5px 20px;
+
+    &:hover {
+      color: #161616;
+      text-decoration: underline;
+      font-weight: 600;
+    }
+  }
+}
+
+.host-van-link-wrapper {
+  color: unset;
+  text-decoration: unset;
+}
+
+.host-vans-list {
+  padding-inline: 26px;
+}
+
+.host-vans-title {
+  padding-inline: 26px;
+}
+
+.host-van-single {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  margin-bottom: 15px;
+  padding-block: 18px;
+  padding-left: 24px;
+
+  > img {
+    height: 70px;
+    border-radius: 5px;
+    margin-right: 17px;
+  }
+}
+
+.host-van-info {
+  h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-block: 10px;
+  }
+
+  p {
+    margin-block: 10px;
+  }
 }
