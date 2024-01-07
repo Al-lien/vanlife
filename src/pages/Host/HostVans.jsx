@@ -13,8 +13,6 @@ function HostVans() {
       .then((data) => setVans(data.vans));
   }, []);
 
-  console.log(vans);
-
   const hostVansEls = vans.map((van) => (
     <Link
       to={`/host/vans/${van.id}`}

@@ -1,4 +1,7 @@
+// react
 import { useEffect, useState } from "react";
+
+// react-router
 import { useParams } from "react-router-dom";
 
 function VanDetail() {
@@ -11,8 +14,6 @@ function VanDetail() {
       .then((res) => res.json())
       .then((data) => setVan(data.vans));
   }, [params.id]);
-
-  van && console.log(van);
 
   return (
     <div className="van-detail-container">

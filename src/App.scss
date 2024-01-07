@@ -92,6 +92,18 @@ footer {
   }
 }
 
+.back-button {
+  display: block;
+  color: black;
+  text-decoration: none;
+  margin-top: 60px;
+  margin-left: 26px;
+
+  span:hover {
+    text-decoration: underline;
+  }
+}
+
 /*** HOME PAGE ***/
 .home-container {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.46), rgba(0, 0, 0, 0.46)),
@@ -362,4 +374,88 @@ i[class*="van-type-"] {
   p {
     margin-block: 10px;
   }
+}
+
+.host-van-detail-layout-container {
+  background-color: white;
+  padding: 24px;
+  margin: 30px 26px;
+}
+
+.host-van-detail {
+  display: flex;
+  align-items: center;
+
+  > img {
+    height: 160px;
+    border-radius: 5px;
+    margin-right: 20px;
+  }
+}
+
+.host-van-detail-info-text {
+  > h3 {
+    margin-top: 24px;
+    margin-bottom: 5px;
+    font-size: 26px;
+    font-weight: 700;
+  }
+
+  > h4 {
+    font-size: 20px;
+    margin-block: 0;
+  }
+}
+
+.host-van-detail-nav {
+  display: flex;
+  margin-block: 25px;
+
+  a {
+    text-decoration: none;
+    color: #4d4d4d;
+    font-weight: 500;
+    padding: 5px 20px;
+
+    &:hover {
+      color: #161616;
+      text-decoration: underline;
+      font-weight: 700;
+    }
+  }
+
+  a:first-of-type {
+    text-decoration: none;
+    color: #4d4d4d;
+    font-weight: 500;
+    padding: 5px 15px;
+    margin-left: -15px;
+  }
+}
+
+.host-van-detail-info {
+  > h4 {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+
+    > span {
+      font-weight: 500;
+    }
+  }
+}
+
+.host-van-price {
+  font-size: 24px;
+  font-weight: 500;
+
+  > span {
+    font-size: 16px;
+    color: #4d4d4d;
+  }
+}
+
+.host-van-detail-image {
+  height: 100px;
+  border-radius: 5px;
 }

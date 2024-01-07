@@ -9,19 +9,19 @@ function Header() {
       </Link>
       <nav>
         <NavLink
-          to="/host"
+          to="host"
           className={({ isActive }) => (isActive ? "activeStyle" : null)}
         >
           Host
         </NavLink>
         <NavLink
-          to="/about"
+          to="about"
           className={({ isActive }) => (isActive ? "activeStyle" : null)}
         >
           About
         </NavLink>
         <NavLink
-          to="/vans"
+          to="vans"
           className={({ isActive }) => (isActive ? "activeStyle" : null)}
         >
           Vans

@@ -11,26 +11,26 @@ function HostLayout() {
     <>
       <nav className="host-nav">
         <NavLink
-          to="/host"
+          to="." // relative link to parent layout
           end // so "Dashboard" is NOT considered active when clicking on other links
           style={({ isActive }) => (isActive ? activeStyles : null)}
         >
           Dashboard
         </NavLink>
         <NavLink
-          to="/host/income"
+          to="income"
           style={({ isActive }) => (isActive ? activeStyles : null)}
         >
           Income
         </NavLink>
         <NavLink
-          to="/host/vans"
+          to="vans"
           style={({ isActive }) => (isActive ? activeStyles : null)}
         >
           Vans
         </NavLink>
         <NavLink
-          to="/host/reviews"
+          to="reviews"
           style={({ isActive }) => (isActive ? activeStyles : null)}
         >
           Reviews
