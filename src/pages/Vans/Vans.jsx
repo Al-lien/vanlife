@@ -1,28 +1,28 @@
-// react
-import { useEffect, useState } from "react";
-
 // react-router
-import { Link, useSearchParams } from "react-router-dom";
+import { Link, useSearchParams, useLoaderData } from "react-router-dom";
+
+// functions
+import { getVans } from "../../api";
+
+export function loader() {
+  return getVans();
+}
 
 function Vans() {
   const [searchParams, setSearchParams] = useSearchParams();
-  const [vans, setVans] = useState([]);
-
   const typeFilter = searchParams.get("type");
 
-  useEffect(() => {
-    fetch("/api/vans")
-      .then((res) => res.json())
-      .then((data) => setVans(data.vans));
-  }, []);
-
+  const vans = useLoaderData();
   const displayedVans = typeFilter
     ? vans.filter((van) => van.type.toLowerCase() === typeFilter)
     : vans;
 
   const vanElements = displayedVans.map((van) => (
     <div key={van.id} className="van-title">
-      <Link to={`${van.id}`}>
+      <Link
+        to={van.id}
+        state={{ search: `?${searchParams.toString()}`, type: typeFilter }}
+      >
         <img src={van.imageUrl} />
         <div className="van-info">
           <h3>{van.name}</h3>
