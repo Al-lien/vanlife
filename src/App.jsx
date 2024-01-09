@@ -30,7 +30,7 @@ import VanDetail, { loader as vanDetailLoader } from "./pages/Vans/VanDetail";
 import { requireAuth } from "./utils";
 
 // server
-import "./server";
+/* import "./server"; */
 
 // styles
 import "./App.scss";

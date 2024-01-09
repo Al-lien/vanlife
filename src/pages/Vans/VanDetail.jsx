@@ -2,10 +2,10 @@
 import { Link, useLoaderData, useLocation } from "react-router-dom";
 
 // functions
-import { getVans } from "../../api";
+import { getVan } from "../../api";
 
 export function loader({ params }) {
-  return getVans(params.id);
+  return getVan(params.id);
 }
 
 function VanDetail() {
