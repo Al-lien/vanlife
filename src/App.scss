@@ -194,6 +194,15 @@ footer {
   }
 }
 
+.van-list-filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+
+  > a {
+    margin-right: 15px;
+  }
+}
+
 .van-list {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -506,6 +515,7 @@ i[class*="van-type-"] {
   }
 
   > button {
+    cursor: pointer;
     background-color: #ff8c38;
     border: none;
     border-radius: 6px;
@@ -513,5 +523,10 @@ i[class*="van-type-"] {
     margin-top: 22px;
     color: white;
     font-family: "Inter", sans-serif;
+
+    &:disabled {
+      background-color: #aaaaaa;
+      cursor: not-allowed;
+    }
   }
 }
